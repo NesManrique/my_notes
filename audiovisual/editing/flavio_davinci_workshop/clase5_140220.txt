@@ -1,0 +1,123 @@
+Transitions
+===========
+
+If you want a crossfade you can click in a cut and with right click you can add some frames of crossfade right away.
+If you want to add a fade at the end or start of a clip you can go to the end and click on the small white marker kind of button to add a fade and then you can also change the curve of it.
+
+
+Titles
+======
+If you want to change just a portion of a text you can select that portion only and change the styles of that selection.
+
+
+Subtitle
+========
+
+It is a good practice to add the zero subtitle. This is to add an empty subtitle at the start of the movie with no content to be able to allign the rest of the subtitles later by simply dragging the whole subtitle track back to min 0 so everything gets alligned.
+
+To export subtitles only you can go to File > Export Subtitles.
+
+Sound
+=====
+
+Peaking voices should be in -3. In average between -8 and -12.
+
+Check that the clip audio type matches the track audio type that it will be in. If you place a mono clip into a stereo track it will only play in one channel. If you play a mono clip in a mono track then it will play in both tracks.
+
+Another option is to set the track type to Adaptive when creating the timeline and it will take the type of the first clip you add there.
+
+You can add keyframes with alt+click in the audio clip boxes.
+
+Master Timeline
+===============
+
+When adding scenes together in a master timeline you can do an insert paste with Edit > Paste insert or Ctrl+Shift+V.
+
+
+Exporting
+=========
+
+First you export a Master File which is usually for archiving and is the best highest settings. They are mastering quality because they are considered loseless quality.
+  - Format: Quicktime or MXF (normal not ATOM) this is the "container". 
+  - Codec: DNxHR or Apple ProRes. (mastering codecs)
+  - Type: DNxHR HQX 10bit or Apple ProRes 422 HQ. IF it is a film project for the cinema then select DNxHR 444 12-bit, you can get a DCP for it. The equivalent for Apple ProRes is 4444 you can also use Apple ProRes 4444 XQ if you are not coming from a master.
+  - Resolution: defaults to the values of the project. WARNING: Don't change the resolution here. If we want to change the resolution change the resolution in your project settings and then export. This is a workflow thing probably will not change in the future is because you can lose quality.
+  - Frame rate: defaults to the values of the project. Same warning as before.
+  - Advanced Settings:
+    * Never use optimized media for rendering
+    * Mark force sizing to highest quality
+
+When creating distributables, don't use the presets instead use the H.264 directly.
+  - Format: MP4
+  - Codec: H.264
+  - Quality: Automatic > Best or set it in Restrict to and set a data rate (kb/s). Depending on this number it will get a smaller or bigger file.
+
+Real optimal workflow:
+  - You export ONCE to a Master file and then you import the master file again into davinci and then export again to youtube, netflix, etc. You export *from* the master file. This is faster because then davinci only has to convert the file.
+
+  - Actually you usually don't do the export from the master file in DaVinci you do that in one of the following. Because they are specially designed for that give you more options and better compression.
+    * Adobe media encoder (subscription expensive AF).
+    * Compressor (50 eur).
+    * Handbrake (Free).
+
+In the same idea, if you want to change from 23.97 to 25 you also take the master file and change that in one of the programs above.
+
+However if you want to do that anyway in DaVinci you can create a *new* timeline and in the creation window you can then select a new framerate. Create new timeline > custom settings > format > timeline frame rate.
+
+DCP (Digital Cinema Package)
+============================
+
+Same story, this is a distribution format. You can render a master file and then from there create a DCP. This is better done by a professional (500eur) it involves testing in a theater, color space transformation, subtitles, etc. There is an easyDCP plugin that costs 1000eur.
+
+DaVinci has a free JPEG Kakadu codec but is experimental.
+
+Rendering different resolutions
+================================
+
+You can set resolutions per *timeline* as well instead of changing the whole _project_ settings. Basically you copy paste a timeline right click > Timelines > Timeline Settings > Format > Use Custom Settings.
+  - Change the resolution. IG for example is 1080x1080 so use custom.
+  - Normally use the "resize full frame with crop" option.
+
+Frame Interpolation
+===================
+- Nearest: Duplicates or deletes frames.
+- Frame blend: Blends 2 frames into one (good enough in most cases for example to go from 24fps to 25fps).
+- Optical flow: Creates frames in between with morphing techniques. Techincally the best one but dangerous because it can create weird artifacts.
+
+Import/Export Projects
+======================
+Open the project manager, right click a project and export it. It will create a drp file that you can move.
+
+To import just select a different database and right click import project and select a drp file.
+
+!This is only a project file, you have to also move the media separately and also do relinking.
+
+Relinking
+---------
+Select individual clips or a full bin, right click > relink selected bin. You can select a folder or a full drive and davinci will scan to find them of course it takes more time to find them if you pick a full drive.
+
+Exporting an Archive
+====================
+It's possible to create an archive which will include both media and project. It will create a dra file you can also include optimized media and render cache files.
+
+Restoring a Project Backup
+==========================
+
+Go to project manager > right click a project > project backups > select one backup > enter a new project name and it will be created.
+
+Database Backups
+================
+
+!Database backups are not done by default! do them at least once a week.
+
+When restoring a database backup use the connect instead of the create tab.
+
+Render Cache
+============
+This is to prerender some parts of the timeline so you can playback easier e.g. an effect. 
+
+For effects, the cache should be rendered in the same quality as you are going to export the whole project later.
+
+You do this in project settings > master settings > Optimized media and Render cache.
+
+Then in the playback menu go to render cache and select smart rendering.

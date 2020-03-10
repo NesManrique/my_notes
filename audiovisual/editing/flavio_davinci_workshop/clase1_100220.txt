@@ -1,0 +1,125 @@
+Betahaus - betahaus09!
+
+First steps
+===========
+- Databases
+- Project Settings
+- App preferences
+
+
+Databases
+=========
+- Davinci works with databases and everything gets saved in there: projects, settings, etc.
+- Idea: use a database per drive, or one for personal and another one for other kind of projects.
+- However you shouldn't have too many databases.
+- To share projects you can create an archive and then restore it in another DB.
+
+Project Settings
+================
+Video format means
+------------------
+- File type: mov, mpg4, etc
+- Resolutions (Vertical, Horizontal): 
+  * HD (1080, 1920)
+  * UHD (2160, 3840)
+  * 2K DCI
+      + flat (1.85:1): 1080, 1998
+      + scope (2.39:1): 858, 2048
+  * 4K DCI
+      flat: 2160, 4096
+      scope: 1176, 4096
+
+DCI = Digital cinema initiatives
+
+  ----------- SCOPE --------------
+  ________________________________
+  |     '                 '      |
+  |     '      FLAT       '      |
+  |     '                 '      |
+  |     '                 '      |
+  |     '                 '      |
+  |     '                 '      |
+  --------------------------------
+
+- Frame-Rate (temporal resolution)
+Frames captured by the camera every second.
+24fps (frames per second), 23.97, digital cinema.
+! 24 is better than 23.97 in camera if possible.
+25fps, TV.
+! 24 is usually more aesthetic than 25 when having motion blur. 24 looks more filmic and reflects the motion blur we see in real life. The higher the fps the less motion blur you get.
+! Soap opera effect is called when the motion blur looks weird, unreal and fake.
+30fps, TV, cell phones.
+50fps or higher: high speed acquisition to produce smooth slow motion clips.
+
+DCP = Digital cinema package
+
+! You should know the final aspect ratio for your project from the start.
+! Project settings in davinci is how you are going to deliver the result regardless of how the initial files are.
+! When setting frame rate in da vinci playback frame rate should be the same as the Timeline frame rate.
+
+Da Vinci General Preferences
+============================
+! Automatic saving is not activated by default. Do eet, but beware it may slow the computer down because it saves everytime you do an action.
+! Also project backups are not activated by default. Do eet. Recomended: 10min, 10 hours, 30 days.
+
+
+Interface
+=========
+
+The interface is organized in pages:
+  - Media: everything related to media, is just a window to see the files on the system. It doesn't import the files right away. The *media pool* is were you add clips to the project.
+  - Cut: Only available in version 16. Is designed to attract people who are not professionals. We don't use it in this workshop. Is a simplify version of the edit page.
+  - Edit: Timelines are organized by tabs
+  - Fusion: Is like after effects, 3D compositing software.
+  - Color: for color grading. Davinci and BaseLight are the top softwares.
+  - Fairlight: For audio.
+  - Deliver: To export media.
+
+- Windows are in different panels. You can't move them but you can hide or show them and also resize them.
+- If you change things you can reset it in the Workspace menu (Reset UI Layout). Or save it as a Layout preset in the same menu.
+- Switch pages can also be done with shift+number (2,3,4,..,8)
+- After locating the folder with the media adding it to favorites saves a lot of clicks.
+
+Importing files
+---------------
+- If you are forcing a frame rate in your project settings, it will complain if you try to import something in another setting and try to change the project setting to match the clip. In general keep the one you set already unless it was a mistake. 
+- You only get this warning when importing the 1st clip that is different. After that the frame rate is set and you don't get the alert anymore.
+- If there are photos with sequencial numbers on the filename davinci will create a clip automatically as an image sequence. Get in the 3 dots on the media storage window and set "Show individual frames" if you just want the images separately.
+
+Clone Tool
+----------
+
+General folder structure
+
+The integrity of the memory card should be respected, so everything in it is copied completely.
+
+Card: cos.001
+Gets copied to at minimum 2 drives:
+  - Backup Drive in: Cosmonaut (folder with the name of the project) > cos.001 (folder for the files)
+  - Working Drive in: Cosmonaut (folder with the name of the project) > cos.001 (folder for the files)
+
+Card: cos.002
+Gets copied to at minimum 2 drives:
+  - Backup Drive in: Cosmonaut (folder with the name of the project) > cos.002 (folder for the files)
+  - Working Drive in: Cosmonaut (folder with the name of the project) > cos.002 (folder for the files)
+
+The clone tool can do this automatically by creating jobs with one source and multiple destinations.
+
+Folders = bins because of physical film times when they selected the takes and put meters of film into a bin. 
+
+To organize the clips you can create a greater folder (bin) called: Rushes, dailys, footage or clips. It was called rushes because in film time they had to rush to have what was shot in the morning ready to be seen in the afternoon.
+
+There is also a bin for each card.
+
+Later inside the RUSHES you add one bin per scene by checking the slate. You can also use characters, locations, etc in case there is no slate. Clips get saved together with the audio in the same bin.
+
+Bin example:
+Master
+|_ CARDS
+  |_ projectname_001
+  |_ projectname_001
+|_RUSHES
+  |_ SCN1
+  |_ SCN2
+
+Furthermore we will type the card number in the metadata of every clip inside it, in the field Reel number or Roll Card.

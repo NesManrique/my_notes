@@ -1,0 +1,103 @@
+!In the project manager the one with a red checkmark is the one that is open/active
+
+Timelines
+=========
+
+- aka Sequence in other programs
+
+Image scaling and changing scopes
+---------------------------------
+
+- If you shot in a different aspect ratio and want to resize by cropping the top and bottom into what you compose already from camera you can do so by going to Project Manager > Image Scaling > Input Scaling > Mistmatched resolution files > Scale full frame with crop. This will:
+  1) Scale up the frame
+  2) Crop it according to the other aspect ratio
+
+- If the idea is to go from 16:9 to cinemascope you just add bars covering top and bottom. You do this by going to Timeline > Output Blanking > 2.39
+
+In other words:
+  - If your footage is in 16:9 and you set the timeline to HD/UHD but want it to look like cinemascope or anything else bc of creative reasons you have to add bars.
+  - If your footage is in 16:9 and you set the timeline to something else and get black bars on the side then you need to image scale to fill those gaps.
+
+Windows
+-------
+- Media Pool: the same as always
+- Metadata: the same as always
+- Effects Library: to add effects, transitions and titles
+- Inspector: to transform a clip, stabilize it, lens correction, etc.
+
+Main Hotkeys
+============
+J K L = play backward, stop, play forward. Hit J or L several times to get more play speed 2x,4x
+I O = mark in/out
+Shift + I O = Go to in/out
+Shift + X = Clean both in and out
+Up and down arrows = jump between clips in the timeline
+Cmd +/- = Zoom in and out of the timeline
+Q = change between Source and Timeline playbacks
+P = Full screen
+
+Timeline bins and naming
+========================
+
+Bin example:
+Master
+|_ CARDS
+  |_ projectname_001
+  |_ projectname_001
+|_RUSHES
+  |_ SCN001
+  |_ SCN002
+|_CUTS (or EDITS)
+  |_ CUTS001 (or EDITS001) -- for each scene a new bin
+    |_ SCN001-0 (SCN001v0 / SCN001 VERSION 0) -- first timeline version for this scene
+
+Three point editing
+===================
+
+Point 1: In
+Point 2: Out
+Point 3: Where in the timeline it should be
+
+Overwrite
+---------
+This is just dragging with the mouse or F10 after marking in/out. Usually to add something to the end but can also be used to literally overwrite a clip that is already in the timeline, whatever it comes over it will be "deleted" from the timeline.
+
+Insert
+------
+This is just dragging with the mouse and then holding Cmd+Shift or F9 after marking in/out. You can do this between a cut or a clip. If it is between a clip it will just split it and move the second part to the right with the rest of the timeline.
+
+!Overwrite/insert just video or audio can be done by either draggin from the source using the frame/waveform icons. Also can be done with the keyboard by activating/deactivating a certain video/audio track.
+
+Patching
+--------
+Changing the destination of the source.
+Video: Cmd+shift+up/down/number
+Audio: Cmd+alt+up/down/number
+
+Exercise
+--------
+- use the photographer shots
+- 3 shots of the guy in the morning
+- something from the interview that makes sense, a full idea. As the guy is answering place 3 working scenes (just video) on top.
+- 4 shots of the wuy working and taking photos
+
+Refining
+========
+For further versions you can go into several modes/tools
+
+Selection Mode (A)rrow
+----------------------
+To delete or move
+
+Trim Mode (T)rim
+----------------
+To change durations
+
+Replace (F11)
+-------------
+
+Cut (B)lade
+-----------
+
+
+!Do not unlink audio and video, is better to unlink the *selection* (shift+cmd+L) and then do what you want with the audio/video separately without desyncing them. Alternatively use alt before clicking to just select one of the parts.

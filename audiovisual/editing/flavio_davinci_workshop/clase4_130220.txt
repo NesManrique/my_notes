@@ -1,0 +1,58 @@
+Refining
+========
+
+Syncing
+-------
+- If you move audio or video out of sync (with alt for example) da vinci shows you a warning on how much it is out of sync. You can slip or move everything to sync.
+
+Slip into sync: Keep the audo/video clip in place but move the contents.
+
+Move into place: Move the full clip/audio to be in sync.
+
+Selecting tracks from clip onwards/backwards.
+---------------------------------------------
+
+Forward one track: Y
+Forward all tracks: alt+Y
+
+Backwards one track: cmd+Y
+Backwards all tracks: cmd+alt+Y
+
+Trimming and (T)rim mode
+------------------------
+
+When being on selection mode, go to the end/beginning of a clip, click and drag as long as they don't have anything behind or in front of them. If there is some other clip you will change it to be shorter. The numbers in the box mean how much you are adding (top one) and how long is it now (bottom one).
+
+To trim and keep clips behind or in front of the one you are changing the same you have to change to trim edit mode.
+
+Ripple Trim: Setting the trim tool in *one of 2* adjacent clips and change the lenght of one and push the other. Icon: :]> or <[:
+Roll Trim: Setting the trim tool in the *middle of 2* clips changing them both but mantaining the overall length. Icon: <][>
+
+Hotkey for moving clips/trimming frame by frame: select *one of 2* or *middle of 2* + "." or ","
+
+Slip Trim: In trim mode, place the cursor in the middle of the clip box, moves the inside of a clip back or forward. Icon: [<>]
+
+Slide Trim: In trim mode, place the cursor in the bottom of the clip box, mantains the clip in the same lenght but moves the contents of the adjacent ones. Icon: <[]>
+
+Cut (B)lade
+-----------
+
+You can delete a cut with the blade with right click and delete through edit. (also possible with ctrl+B)
+
+Replace Clip
+------------
+
+Timeline playhead on the first frame of the clip you want to change, source in the first frame of the clip you want to replace, click replace button or f11, it doesn't need an in/out marker. This will not change the length. If you want to change the length trim later or in/out + insert + delete the older one.
+
+
+You can enable and disable clips with D.
+
+Stacked Timelines
+-----------------
+- Activate stacked timelines in timeline options.
+- Add a timeline by clicking the button on the left below the players.
+
+
+Effects
+-------
+! Effects translate this way between edit, fusion and color modes: Fusion doesn't see anything done in Edit. Color joins whatever is done in color and edit. Example: if you add gausian blur in Edit it will no show in Fusion. If you add gausian blur again fusion both of them will show in color. You can add it again in color but then you will have 3 times gausian blur applied.

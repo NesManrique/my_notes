@@ -1,0 +1,113 @@
+Organizing the project
+======================
+
+What to do with the clips:
+- Bins
+- Naming clips
+- Metadata
+- Markers (e.g. an interview with a large clip, mark Q&As)
+- Subclips
+
+Naming
+------
+- By shot order, e.g. SCENE-SHOT-TAKE (2-3-1),(2-3-2),(2-3-3)
+  ! Usually the last take is the best  
+- By shot type + subject
+
+Keywords
+--------
+Used to identifying things relevant in a clip.
+Examples:
+- "graffiti" in kotty shots examples
+- "good" for takes you like
+- "night" or "day"
+- characters.
+- noisy shots.
+
+Clip Colors
+-----------
+Assign the same color to a set of clips
+
+!Remember: If you add metadata to several clips at the same time you have to click SAVE at the end.
+!Also recomended to add the roll card in the metadata.
+
+Markers
+-------
+Used to identify moments of interest inside the shot.
+
+Example:
+- Mark questions and answers in a interview.
+
+Mark (I)n/Mark (O)ut
+--------------------
+Define a range in a clip. The hotkeys are the same in every program.
+
+We can turn a range into a "Duration Marker" where you can add a description, name, etc.
+
+!According to flavio he doesn't use this too much he just cares about where something nice "starts" and do the rest of the decisions in the timeline.
+
+!Enabling the zoomed audio waveform in the playback helps a lot on setting markers before dialog
+
+Subclips
+--------
+Allows you to extract a smaller subclip from bigger clips.
+
+Searching
+---------
+Click on the magnifying glass, generally better to search on all metadata.
+
+Smart Bins
+----------
+Bins are created automatically based on search criteria
+
+Transcoding and optimised media (proxied)
+=========================================
+In high end productions with lots of footage you _always_ transcode. The reason is because is convenient to share, playback and handle smaller files.
+
+Process (aka Offline conforming)
+--------------------------------
+- Go to project settings > Master Settings > Optimized Media and Render Cache and set:
+  * Quality:
+    + Optimized media resolution (resolution): original, half, quarter, etc.
+    + Optimized media format (codecs, sorted from better to worst): 
+      = DNxHR HQX (for big productions, cross platform)
+      = DNxHR LB (Low band, cross platform)
+  * Destination folder (new media will be generated here)
+
+!Proxies should be stored in your fastest disk. Probably where you have the media already. For connection protocols at the moment the fastest is Thunderbolt 3 (40Gbps) but USB-C is usually ok (10Gbps). For disk speed SSD and NVMe
+
+To go back to the original media go to "Playback > Use Optimized Media If Available"
+
+Post producer coordinator or Supervisor: The guy that designs and coordinates the whole post-production pipeline.
+
+There is a proxy mode but it's only to work with color and it's not really worth it, better to ignore it.
+
+Clip Attributes
+===============
+
+Changing frame rates
+--------------------
+Right click > Clip attributes > Video > Video frame rate
+
+!Take a note of the original frame rate because it doesnt show it later.
+
+Audio channels
+--------------
+Right click > Clip attributes > Audio
+
+!If you want to change the way the channels are configured for a clip you have to do it _before_ adding them to the timeline because then you can do it for several clips at the same time.
+
+By default if you have stereo audio it is shown as one track with 2 channels in it. The idea to separate them is mainly if you have several mics while shooting and want to change the audio separately for each of them.
+
+Syncing video and audio
+=======================
+
+- Based on Timecode: Using a separate device as a single clock source and match the camera and sound recorder to that clock source.
+  * Only takes the external audio and matches with timecode.
+  * Append tracks: preserves the camera audio and adds the external audio as extra channels
+
+- Based on Waveform:
+  * Analyses the camera audio and the external audio and matches with the waveform.
+  * Append tracks: preserves the camera audio and adds the external audio as extra channels
+
+!Again when using append tracks by default it adds an extra stereo track with 2 channels mixed in it, so you would have 2 stereo channels. You have to go to the clip attributes to select how you want to organize the tracks.  
